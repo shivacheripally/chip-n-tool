@@ -1,0 +1,112 @@
+[
+  {
+    "id": "rev_1",
+    "product_id": "prod_1",
+    "user_id": "user_1",
+    "user_name": "Rahul Sharma",
+    "rating": 5,
+    "title": "Excellent laptop for professionals",
+    "comment": "I've been using this laptop for three months now, and it exceeds all my expectations. The build quality is superb, performance is blazing fast, and the battery easily lasts a full workday. The display is absolutely gorgeous with vivid colors and excellent brightness. Highly recommended for professionals who need a reliable machine.",
+    "date": "2023-02-15",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_2",
+    "product_id": "prod_1",
+    "user_id": "user_2",
+    "user_name": "Priya Patel",
+    "rating": 4,
+    "title": "Great laptop with minor issues",
+    "comment": "This is an excellent laptop overall. The performance is outstanding, and the display is beautiful. My only complaint is that it tends to run a bit hot during intensive tasks, and the fan noise can be noticeable. Otherwise, it's perfect for my needs as a graphic designer.",
+    "date": "2023-03-20",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_3",
+    "product_id": "prod_2",
+    "user_id": "user_3",
+    "user_name": "Amit Kumar",
+    "rating": 5,
+    "title": "Best business laptop I've used",
+    "comment": "The ThinkPad E15 is a fantastic business laptop. The keyboard is a joy to type on, performance is snappy, and the build quality is solid. Battery life is excellent, lasting me through a full day of meetings and work. The security features give me peace of mind when handling sensitive client information.",
+    "date": "2023-01-10",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_4",
+    "product_id": "prod_2",
+    "user_id": "user_4",
+    "user_name": "Meera Joshi",
+    "rating": 4,
+    "title": "Solid performance for business use",
+    "comment": "I purchased this laptop for my small business, and it has been a reliable workhorse. The performance is good for office tasks, video calls, and multitasking. The keyboard is comfortable for long typing sessions. My only wish is that the display was a bit brighter for outdoor use.",
+    "date": "2023-04-05",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_5",
+    "product_id": "prod_3",
+    "user_id": "user_5",
+    "user_name": "Vikram Singh",
+    "rating": 5,
+    "title": "Incredible processing power",
+    "comment": "This processor is an absolute beast! I upgraded from an older i7, and the difference is night and day. My video rendering times have been cut in half, and games run smoother than ever. The multi-core performance is especially impressive for my 3D modeling work. Yes, it runs a bit hot under load, but with proper cooling, it's not an issue.",
+    "date": "2023-02-28",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_6",
+    "product_id": "prod_4",
+    "user_id": "user_6",
+    "user_name": "Suresh Menon",
+    "rating": 5,
+    "title": "Lightning-fast SSD",
+    "comment": "This SSD has transformed my aging laptop into a speed demon. Boot times went from over a minute to under 15 seconds. Applications launch instantly, and file transfers are blazing fast. Installation was straightforward, and I used the Samsung Migration software to clone my old drive without any issues. Excellent value for the performance gain!",
+    "date": "2023-03-15",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_7",
+    "product_id": "prod_5",
+    "user_id": "user_7",
+    "user_name": "Ananya Reddy",
+    "rating": 5,
+    "title": "Premium 2-in-1 with gorgeous display",
+    "comment": "The HP Spectre x360 is the epitome of premium laptops. The OLED display is absolutely stunning with perfect blacks and vibrant colors - it makes everything look amazing. The build quality is top-notch with a solid aluminum chassis and precise hinges. I love the versatility of the 2-in-1 design, and the included pen works great for note-taking and drawing. Battery life is impressive, lasting me through a full workday with moderate use.",
+    "date": "2023-05-12",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_8",
+    "product_id": "prod_6",
+    "user_id": "user_8",
+    "user_name": "Karan Malhotra",
+    "rating": 5,
+    "title": "Workstation-class performance",
+    "comment": "The Ryzen 9 5950X is an absolute powerhouse. I built a workstation for 3D rendering and video editing, and this CPU handles everything I throw at it with ease. Rendering times are significantly reduced compared to my previous setup. The multi-threading performance is particularly impressive - I can run multiple heavy applications simultaneously without any slowdown. It runs a bit hot under sustained load, so invest in good cooling.",
+    "date": "2023-04-18",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_9",
+    "product_id": "prod_7",
+    "user_id": "user_9",
+    "user_name": "Neha Kapoor",
+    "rating": 4,
+    "title": "Reliable storage expansion",
+    "comment": "This WD Blue hard drive has been a solid addition to my PC for storing photos, videos, and games that don't need SSD speeds. The 7200 RPM provides decent performance for a mechanical drive, and it's been perfectly reliable over several months of use. Installation was straightforward, and the drive was recognized immediately. Good value for bulk storage needs.",
+    "date": "2023-03-25",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev_10",
+    "product_id": "prod_8",
+    "user_id": "user_10",
+    "user_name": "Arjun Nair",
+    "rating": 5,
+    "title": "Best productivity mouse on the market",
+    "comment": "The MX Master 3 has significantly improved my workflow. The magnetic scroll wheel is a game-changer - smooth for precise scrolling but can also fly through long documents with a flick. The thumb controls and customizable buttons save me tons of time when navigating between applications and browser tabs. Battery life is excellent - I charge it maybe once a month with daily use. The ergonomic design is comfortable for all-day use, reducing wrist strain. Worth every rupee for productivity-focused users.",
+    "date": "2023-05-05",
+    "verified_purchase": true
+  }
+]

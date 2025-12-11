@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html, body {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-standard {
+    @apply h-10 flex items-center justify-center;
+  }
+}

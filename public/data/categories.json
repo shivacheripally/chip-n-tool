@@ -1,0 +1,66 @@
+[
+  {
+    "id": "cat_laptops",
+    "name": "Laptops",
+    "slug": "laptops",
+    "description": "Portable computers for work and play",
+    "image": "https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_desktops",
+    "name": "Desktop PCs",
+    "slug": "desktops",
+    "description": "Powerful desktop computers for home and office",
+    "image": "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_cpus",
+    "name": "Processors",
+    "slug": "cpus",
+    "description": "CPUs for building or upgrading your PC",
+    "image": "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_storage",
+    "name": "Storage",
+    "slug": "storage",
+    "description": "SSDs, HDDs, and external storage solutions",
+    "image": "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_gaming_pcs",
+    "name": "Gaming PCs",
+    "slug": "gaming-pcs",
+    "description": "High-performance gaming desktops and laptops",
+    "image": "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_accessories",
+    "name": "Accessories",
+    "slug": "accessories",
+    "description": "Keyboards, mice, headsets, and more",
+    "image": "https://images.pexels.com/photos/1267343/pexels-photo-1267343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": null
+  },
+  {
+    "id": "cat_gaming_laptops",
+    "name": "Gaming Laptops",
+    "slug": "gaming-laptops",
+    "description": "Portable gaming machines with powerful graphics",
+    "image": "https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": "cat_laptops"
+  },
+  {
+    "id": "cat_business_laptops",
+    "name": "Business Laptops",
+    "slug": "business-laptops",
+    "description": "Reliable laptops for professional use",
+    "image": "https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "parent_id": "cat_laptops"
+  }
+]

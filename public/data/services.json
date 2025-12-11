@@ -1,0 +1,90 @@
+[
+  {
+    "id": "srv_1",
+    "service_name": "Laptop Screen Replacement",
+    "description": "Professional replacement of cracked or malfunctioning laptop screens with high-quality parts. Our technicians will carefully replace your damaged screen with a new one that matches your laptop's specifications. We use only genuine or high-quality compatible parts to ensure optimal display quality and longevity.",
+    "short_description": "Replace your cracked or malfunctioning laptop screen",
+    "base_price": 4999,
+    "duration_estimate": "1-2 hours",
+    "home_visit_available": true,
+    "image": "https://images.pexels.com/photos/6771607/pexels-photo-6771607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": true
+  },
+  {
+    "id": "srv_2",
+    "service_name": "Virus Removal & System Protection",
+    "description": "Complete virus and malware removal service with installation of robust security software to protect your system from future threats. Our experts will scan your computer, remove all malicious software, and optimize your system's performance. We'll also set up reliable antivirus protection and educate you on best practices for online safety.",
+    "short_description": "Remove viruses and malware and secure your computer",
+    "base_price": 1499,
+    "duration_estimate": "2-3 hours",
+    "home_visit_available": true,
+    "image": "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": true
+  },
+  {
+    "id": "srv_3",
+    "service_name": "Data Recovery",
+    "description": "Professional data recovery service for damaged or corrupted storage devices. Our specialists use advanced tools and techniques to recover your valuable data from failing hard drives, SSDs, memory cards, and USB drives. We prioritize the security and confidentiality of your data throughout the recovery process.",
+    "short_description": "Recover lost data from damaged storage devices",
+    "base_price": 3999,
+    "duration_estimate": "24-48 hours",
+    "home_visit_available": false,
+    "image": "https://images.pexels.com/photos/117729/pexels-photo-117729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": true
+  },
+  {
+    "id": "srv_4",
+    "service_name": "PC Performance Optimization",
+    "description": "Comprehensive computer optimization service to significantly improve your system's speed and performance. We'll clean up unnecessary files, optimize startup programs, update drivers, check for hardware issues, and make appropriate adjustments to system settings. This service is ideal for computers that have slowed down over time.",
+    "short_description": "Speed up your slow computer with our optimization service",
+    "base_price": 1999,
+    "duration_estimate": "1-2 hours",
+    "home_visit_available": true,
+    "image": "https://images.pexels.com/photos/2582936/pexels-photo-2582936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": true
+  },
+  {
+    "id": "srv_5",
+    "service_name": "Custom PC Building",
+    "description": "Professional computer building service tailored to your specific needs and budget. Our experts will help you select the best components, assemble your custom PC with precision, install necessary software, and ensure everything is optimized for maximum performance. Each build includes thorough testing and a satisfaction guarantee.",
+    "short_description": "Get a custom-built PC tailored to your needs",
+    "base_price": 2999,
+    "duration_estimate": "24-48 hours",
+    "home_visit_available": false,
+    "image": "https://images.pexels.com/photos/2225617/pexels-photo-2225617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": false
+  },
+  {
+    "id": "srv_6",
+    "service_name": "Hardware Upgrade",
+    "description": "Professional hardware upgrade service to enhance your computer's performance. We can upgrade various components including RAM, storage drives, graphics cards, processors, and more. Our technicians will ensure compatibility, proper installation, and optimal configuration of your new hardware.",
+    "short_description": "Upgrade your computer's hardware for better performance",
+    "base_price": 1499,
+    "duration_estimate": "1-3 hours",
+    "home_visit_available": true,
+    "image": "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": false
+  },
+  {
+    "id": "srv_7",
+    "service_name": "Liquid Cooling Installation",
+    "description": "Professional installation of liquid cooling systems for enhanced thermal performance and quieter operation. Our specialists will install a custom or AIO liquid cooling solution in your PC, ensuring proper mounting, optimal airflow, and leak testing. This service is ideal for gaming PCs, workstations, and overclocked systems.",
+    "short_description": "Keep your high-performance PC cool with liquid cooling",
+    "base_price": 3499,
+    "duration_estimate": "3-4 hours",
+    "home_visit_available": false,
+    "image": "https://images.pexels.com/photos/2225617/pexels-photo-2225617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": false
+  },
+  {
+    "id": "srv_8",
+    "service_name": "Operating System Installation",
+    "description": "Complete operating system installation and setup service. We'll install Windows, macOS, or Linux on your computer, configure essential settings, install critical drivers and updates, and ensure your system is optimized for performance and security. This service includes data backup if needed.",
+    "short_description": "Fresh OS installation and setup for your computer",
+    "base_price": 1999,
+    "duration_estimate": "2-3 hours",
+    "home_visit_available": true,
+    "image": "https://images.pexels.com/photos/693859/pexels-photo-693859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750",
+    "popular": false
+  }
+]
