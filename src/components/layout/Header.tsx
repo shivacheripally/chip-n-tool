@@ -1,15 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ShoppingCart, Search, Menu, X, User, Heart, Laptop, Cpu, HardDrive, Divide as LucideIcon } from 'lucide-react';
-import { useCart } from '../../contexts/CartContext';
-import { useAuth } from '../../contexts/AuthContext';
-import SearchBar from '../ui/SearchBar';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  ShoppingCart,
+  Search,
+  Menu,
+  X,
+  User,
+  Heart,
+  Laptop,
+  Cpu,
+  HardDrive,
+  Divide as LucideIcon,
+} from "lucide-react";
+import { useCart } from "../../contexts/CartContext";
+import { useAuth } from "../../contexts/AuthContext";
+import SearchBar from "../ui/SearchBar";
+const adminEmail = import.meta.env.VITE_ADMIN_EMAIL;
 
 interface NavLink {
   name: string;
   path: string;
-  icon?: LucideIcon;
+  icon?: typeof LucideIcon;
 }
 
 const Header: React.FC = () => {
@@ -19,12 +31,14 @@ const Header: React.FC = () => {
   const { cart } = useCart();
   const { isAuthenticated, user } = useAuth();
   const location = useLocation();
+  const adminEmails = adminEmail.split(",");
+  const isAdmin = adminEmails.includes(user?.email || "");
 
   const mainNavLinks: NavLink[] = [
-    { name: 'Laptops', path: '/categories/laptops', icon: Laptop },
-    { name: 'CPUs', path: '/categories/cpus', icon: Cpu },
-    { name: 'Storage', path: '/categories/storage', icon: HardDrive },
-    { name: 'Repair Services', path: '/services' },
+    { name: "Laptops", path: "/categories/laptops", icon: Laptop },
+    { name: "CPUs", path: "/categories/cpus", icon: Cpu },
+    { name: "Storage", path: "/categories/storage", icon: HardDrive },
+    { name: "Repair Services", path: "/services" },
   ];
 
   useEffect(() => {
@@ -32,9 +46,9 @@ const Header: React.FC = () => {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -48,7 +62,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-3">
@@ -92,12 +106,14 @@ const Header: React.FC = () => {
 
           {/* Desktop Right Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
-              to="/add-products"
-              className="btn-standard px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
-            >
-              Add Product
-            </Link>
+            {isAdmin && (
+              <Link
+                to="/add-products"
+                className="btn-standard px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
+              >
+                Add Product
+              </Link>
+            )}
 
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -109,15 +125,24 @@ const Header: React.FC = () => {
               <Search size={20} />
             </motion.button>
 
-            <Link to="/wishlist" className="btn-standard px-3 text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              to="/wishlist"
+              className="btn-standard px-3 text-gray-700 hover:text-blue-600 transition-colors"
+            >
               <Heart size={20} />
             </Link>
 
-            <Link to={isAuthenticated ? '/account' : '/login'} className="btn-standard px-3 text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              to={isAuthenticated ? "/account" : "/login"}
+              className="btn-standard px-3 text-gray-700 hover:text-blue-600 transition-colors"
+            >
               <User size={20} />
             </Link>
 
-            <Link to="/cart" className="btn-standard relative px-3 text-gray-700 hover:text-blue-600 transition-colors">
+            <Link
+              to="/cart"
+              className="btn-standard relative px-3 text-gray-700 hover:text-blue-600 transition-colors"
+            >
               <ShoppingCart size={20} />
               {cartItemsCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -129,7 +154,10 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-3">
-            <Link to="/cart" className="btn-standard relative px-3 text-gray-700">
+            <Link
+              to="/cart"
+              className="btn-standard relative px-3 text-gray-700"
+            >
               <ShoppingCart size={20} />
               {cartItemsCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -165,21 +193,23 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
+          animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
           className="md:hidden bg-white border-t border-gray-200 shadow-lg"
         >
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col space-y-4">
               <SearchBar onClose={() => {}} mobileVersion />
-              
-              <Link
-                to="/add-products"
-                className="flex items-center py-2 px-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Add Product
-              </Link>
+
+              {isAdmin && (
+                <Link
+                  to="/add-products"
+                  className="flex items-center py-2 px-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Add Product
+                </Link>
+              )}
 
               {mainNavLinks.map((link) => (
                 <Link
@@ -194,16 +224,16 @@ const Header: React.FC = () => {
               ))}
 
               <div className="border-t border-gray-200 pt-4 mt-2">
-                <Link 
-                  to={isAuthenticated ? '/account' : '/login'}
+                <Link
+                  to={isAuthenticated ? "/account" : "/login"}
                   className="flex items-center py-2 text-gray-700 hover:text-blue-600 font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <User size={18} className="mr-2" />
-                  {isAuthenticated ? 'My Account' : 'Sign In'}
+                  {isAuthenticated ? "My Account" : "Sign In"}
                 </Link>
-                
-                <Link 
+
+                <Link
                   to="/wishlist"
                   className="flex items-center py-2 text-gray-700 hover:text-blue-600 font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -211,7 +241,7 @@ const Header: React.FC = () => {
                   <Heart size={18} className="mr-2" />
                   Wishlist
                 </Link>
-              </div> 
+              </div>
             </div>
           </div>
         </motion.div>

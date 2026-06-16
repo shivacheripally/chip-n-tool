@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDTyRuUfjOjO51mwBuYEz3FIIQHg7J4tkU",
-  authDomain: "srimahatishwariikkathsarees.firebaseapp.com",
-  projectId: "srimahatishwariikkathsarees",
-  storageBucket: "srimahatishwariikkathsarees.appspot.com",
-  messagingSenderId: "84496369812",
-  appId: "1:84496369812:web:9dd4a6a3bf424760538c81",
-  measurementId: "G-9V2XV4YCZK"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY_IMAGE,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN_IMAGE,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID_IMAGE,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET_IMAGE,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID_IMAGE,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID_IMAGE,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID_IMAGE,
 };
 
 const imageApp = initializeApp(firebaseConfig, 'imageApp');
