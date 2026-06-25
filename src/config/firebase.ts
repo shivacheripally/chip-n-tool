@@ -3,12 +3,12 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDwx-HaY2-3HZrwQXPc7KKMcYfoV9lTEl8",
-  authDomain: "chipntool.firebaseapp.com",
-  projectId: "chipntool",
-  storageBucket: "chipntool.firebasestorage.app",
-  messagingSenderId: "673743470424",
-  appId: "1:673743470424:web:590e8ca6f7d2fc29d22f2d"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
