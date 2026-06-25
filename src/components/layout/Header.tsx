@@ -92,12 +92,12 @@ const Header: React.FC = () => {
 
           {/* Desktop Right Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link
+            {user?.role === "admin" && <Link
               to="/add-products"
               className="btn-standard px-4 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors text-sm font-medium"
             >
               Add Product
-            </Link>
+            </Link>}
 
             <motion.button
               whileHover={{ scale: 1.1 }}

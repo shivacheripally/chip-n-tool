@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Laptop } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+
+const HOME_PATH = '/';
 
 const LoginPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -12,11 +14,14 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
-  const { loginWithGoogle, loginWithEmail, signUpWithEmail } = useAuth();
+  const { isAuthenticated, loading, loginWithGoogle, loginWithEmail, signUpWithEmail } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
 
-  const from = location.state?.from?.pathname || '/';
+  useEffect(() => {
+    if (!loading && isAuthenticated) {
+      navigate(HOME_PATH, { replace: true });
+    }
+  }, [isAuthenticated, loading, navigate]);
 
   const handleGoogleLogin = async () => {
     setIsLoading(true);
@@ -25,11 +30,12 @@ const LoginPage: React.FC = () => {
     try {
       const success = await loginWithGoogle();
       if (success) {
-        navigate(from, { replace: true });
+        navigate(HOME_PATH, { replace: true });
       } else {
         setError('Google login failed');
       }
     } catch (err) {
+      console.log('An error occurred during login: ', err);
       setError('An error occurred during login');
     } finally {
       setIsLoading(false);
@@ -62,7 +68,7 @@ const LoginPage: React.FC = () => {
       }
 
       if (success) {
-        navigate(from, { replace: true });
+        navigate(HOME_PATH, { replace: true });
       } else {
         setError(isSignUp ? 'Signup failed. Email may already be in use.' : 'Invalid email or password');
       }
