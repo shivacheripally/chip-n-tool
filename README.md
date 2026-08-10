@@ -1,5 +1,5 @@
 # TechHub E-commerce Platform
-
+https://chip-n-tool.netlify.app/
 A modern e-commerce platform for computer hardware with Firebase authentication and admin features.
 
 ## Features
